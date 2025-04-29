@@ -1,6 +1,6 @@
 {
   "name": "scaffold",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "src/app.js",
   "repository": {
@@ -13,15 +13,24 @@
     "start": "node dist/app.js",
     "prebuild": "npm run format && npm run lint",
     "build": "tsc",
+    "lint": "tsc -b && echo",
     "format": "prettier src --check",
-    "format:fix": "prettier src --write"
+    "format:fix": "prettier src --write",
+    "prepare": "husky",
+    "commit": "cz"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.8.1",
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@types/node": "^22.15.3",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
     "prisma": "^6.6.0",
     "ts-node-dev": "^2.0.0",
@@ -29,5 +38,10 @@
   },
   "dependencies": {
     "@prisma/client": "^6.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
