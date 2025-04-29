@@ -1,11 +1,18 @@
 {
   "name": "scaffold",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node-dev src/app.ts"
+    "dev": "npx ts-node-dev src/app.ts",
+    "start": "node dist/app.js",
+    "prebuild": "npm run format && npm run lint",
+    "build": "tsc",
+    "format": "prettier src --check",
+    "format:fix": "prettier src --write",
+    "lint": "tsc -b",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
