@@ -6,3 +6,4 @@ dist
 # Prisma
 .prisma
 
+*.tsbuildinfo
