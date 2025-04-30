@@ -9,9 +9,10 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
     "baseUrl": "src",
     "paths": {
-      "@/*": ["/*"]
+      "@/*": ["*"]
     }
   },
   "include": ["src"]
